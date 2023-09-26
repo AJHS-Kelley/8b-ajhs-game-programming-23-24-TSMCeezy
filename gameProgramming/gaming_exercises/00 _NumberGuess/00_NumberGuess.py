@@ -37,15 +37,13 @@ print("""
       """)
 
 # CPU SECRET NUMBER GRERATION
-secretNumber = random.randint(0, 20)
-print(secretNumber)
+
 
 # GANG LOOP
-print("You need to guess a number from 0 to 20.\nYou have four guesses.\nIf you guess right you get a point.\n if you dont get it right in 4 guesses CPU gets a point.")
 # Change difficulty code
 # Make a explination for each difficulty 
 print("Easy difficulty keeps your number range small and attempts big. Normal keeps the attempts normal and range normal. Hard makes the range larger and attempts low.")
-
+difficulty = input("Choose a difficulty\n")
 
  
 # Let the player choose dificulty
@@ -53,51 +51,50 @@ print("Easy difficulty keeps your number range small and attempts big. Normal ke
 # Assign values to numAttempts, rangMax, and rangMin
 while playerScore != 3 and cpuScore != 3: # Game starts
     # pass -- TELLS Python to skip this block of code
-    secretNumber = random.randint(rangeMin, rangeMax)
     # whenever you assign  specific value to somthing, it's called "hard coded".
-print(secretNumber)
-print(f"Player Score: {playerScore}\nCPU Score: {cpuScore}.\n")
-#print secrete numneber
-# Add code here to change difficulty in each round.
-difficulty = input("Choose a difficulty")
-if difficulty == Easy:
-    rangeMin == 1
-    rangeMax == 20
-    numAttempts == 4
-elif difficulty == Normal:
-    rangeMin == 20
-    rangeMax == 40
-    numAttempts == 2
-elif difficulty == Hard:
-    rangeMin == 40
-    rangeMax == 100
-    numAttempts == 1
+    print(f"Player Score: {playerScore}\nCPU Score: {cpuScore}.\n")
+    #print secrete numneber
+    # Add code here to change difficulty in each round.
+    if difficulty == "Easy":
+        rangeMin = 1
+        rangeMax = 20
+        numAttempts = 4
+    elif difficulty == "Normal":
+        rangeMin = 20
+        rangeMax = 40
+        numAttempts = 2
+    elif difficulty == "Hard":
+        rangeMin = 40
+        rangeMax = 100
+        numAttempts = 1
     secretNumber = random.randint(rangeMin, rangeMax)
-numGuesses = 0 
-for guesses in range(4): # round starts
-        print(f"You have {4-numGuesses} guesses remaining.\n")
-        playerGuess = input(("type a number from 0 to 20 and push enter.\n"))
-        # input() save whatever you type in as a string.
-        # int() will convert it to an integer
-        # float() will convert to a float
-        if playerGuess == secretNumber:
-            print("Whoa dude, what a guess, you got it.\n")
-            playerScore += 1
-            break #IMMEDIATELY EXIT ANY LOOP
-        else:
-            print("You did not guess correctley.\n")
-            if playerGuess > secretNumber:
-                print("Your guess is too high.\n")
+    print(secretNumber)
+    numGuesses = 0 
+    print(f"You need to guess a number from {rangeMin} to {rangeMax}.\nYou have {numAttempts} guesses.\nIf you guess right you get a point.\n if you dont get it right in 4 guesses CPU gets a point.")
+    for guesses in range(4): # round starts
+            print(f"You have {4-numGuesses} guesses remaining.\n")
+            playerGuess = int(input("type a number from 0 to 20 and push enter.\n"))
+            # input() save whatever you type in as a string.
+            # int() will convert it to an integer
+            # float() will convert to a float
+            if playerGuess == secretNumber:
+                print("Whoa dude, what a guess, you got it.\n")
+                playerScore += 1
+                break #IMMEDIATELY EXIT ANY LOOP
             else:
-                print("Your guess is too low.\n")
-        numGuesses -= 1       
-        if playerGuess != secretNumber:
-          cpuScore += 1
-        print("The CPU wins a point.\n")     
-if playerScore >=3:
-    print("Good dubs.\n")
-else:
-    print("You lost to a computer.\n")
+                print("You did not guess correctley.\n")
+                if playerGuess > secretNumber:
+                    print("Your guess is too high.\n")
+                else:
+                    print("Your guess is too low.\n")
+            numGuesses -= 1       
+            if playerGuess != secretNumber:
+                cpuScore += 1
+            print("The CPU wins a point.\n")     
+    if playerScore >=3:
+        print("Good dubs.\n")
+    else:
+        print("You lost to a computer.\n")
 
 
-                
+                    
