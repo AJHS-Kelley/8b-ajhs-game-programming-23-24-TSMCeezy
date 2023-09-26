@@ -22,7 +22,7 @@ playerScore = 0
 cpuScore = 0
 numGuesses = 0
 playerName = ""
-difficulty = "Normal" "Easy" "Hard"
+difficulty = ""
 rangeMin = -1
 rangeMax = -1
 numAttempts = -1
@@ -67,6 +67,9 @@ while playerScore != 3 and cpuScore != 3: # Game starts
         rangeMin = 40
         rangeMax = 100
         numAttempts = 1
+    else: 
+        # You need to add the default values from one of the other difficulty levels. 
+        pass 
     secretNumber = random.randint(rangeMin, rangeMax)
     print(secretNumber)
     numGuesses = 0 
