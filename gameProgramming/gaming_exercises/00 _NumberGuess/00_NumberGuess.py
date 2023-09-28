@@ -68,6 +68,7 @@ while playerScore != 3 and cpuScore != 3: # Game starts
         rangeMax = 100
         numAttempts = 1
     else: 
+        print ("No difficualty chose so your on normal or you typed incorrectly")
         difficulty == "Normal"
         rangeMin = 20
         rangeMax = 40
@@ -76,7 +77,6 @@ while playerScore != 3 and cpuScore != 3: # Game starts
         # You need to add the default values from one of the other difficulty levels. 
         pass 
     secretNumber = random.randint(rangeMin, rangeMax)
-    print(secretNumber)
     numGuesses = 0 
     print(f"You need to guess a number from {rangeMin} to {rangeMax}.\nYou have {numAttempts} guesses.\nIf you guess right you get a point.\n if you dont get it right in 4 guesses CPU gets a point.")
     for guesses in range(4): # round starts
