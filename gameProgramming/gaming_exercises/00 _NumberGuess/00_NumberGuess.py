@@ -68,6 +68,7 @@ while playerScore != 3 and cpuScore != 3: # Game starts
         rangeMax = 100
         numAttempts = 1
     else: 
+        
         # You need to add the default values from one of the other difficulty levels. 
         pass 
     secretNumber = random.randint(rangeMin, rangeMax)
