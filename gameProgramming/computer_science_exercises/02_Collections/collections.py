@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.1B
+#Collections examples, Ceon gordon V0.1C
 
 #LIST -- ordered, changeable, it allows duplicates
 breakfastFoods = ["Bacon", "Waffles"] 
@@ -10,6 +10,16 @@ testScores = [95,100,25,15,27,35]
 classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
 
 # Printing contents of an list
-print (breakfastFoods)
-print (testScores)
-print(classGpa)
+#print (breakfastFoods)
+#print (testScores)
+#print(classGpa)
+
+# Acces specific things in list
+#print(breakfastFoods[0])
+#print(testScores[0])
+#print(classGpa[0])
+
+#Accsesing last item in list -- use -1
+print(breakfastFoods[-1])
+print(testScores[-1])
+print(classGpa[-1])
