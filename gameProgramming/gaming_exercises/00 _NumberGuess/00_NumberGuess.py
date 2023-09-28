@@ -55,19 +55,23 @@ while playerScore != 3 and cpuScore != 3: # Game starts
     print(f"Player Score: {playerScore}\nCPU Score: {cpuScore}.\n")
     #print secrete numneber
     # Add code here to change difficulty in each round.
-    if difficulty == "easy":
+    if difficulty == "Easy":
         rangeMin = 1
         rangeMax = 20
         numAttempts = 4
-    elif difficulty == "normal":
+    elif difficulty == "Normal":
         rangeMin = 20
         rangeMax = 40
         numAttempts = 2
-    elif difficulty == "hard":
+    elif difficulty == "Hard":
         rangeMin = 40
         rangeMax = 100
         numAttempts = 1
     else: 
+        difficulty == "Normal"
+        rangeMin = 20
+        rangeMax = 40
+        numAttempts = 2
         
         # You need to add the default values from one of the other difficulty levels. 
         pass 
