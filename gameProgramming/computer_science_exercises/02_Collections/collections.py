@@ -1,7 +1,7 @@
 #Collections examples, Ceon gordon V0.1C
 
 #LIST -- ordered, changeable, it allows duplicates
-breakfastFoods = ["Bacon", "Waffles"] 
+breakfastFoods = ["Bacon", "Waffles", "Bread"] 
 #Each item is a element
 #THe position in the list for each is the INDEX
 #The element "Bacon" is at idex 0
@@ -23,3 +23,7 @@ classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
 print(breakfastFoods[-1])
 print(testScores[-1])
 print(classGpa[-1])
+
+print(breakfastFoods[2])
+print(testScores[2])
+print(classGpa[2])
