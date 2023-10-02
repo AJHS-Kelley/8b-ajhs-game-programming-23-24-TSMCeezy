@@ -27,3 +27,4 @@ print(classGpa[-1])
 print(breakfastFoods[2])
 print(testScores[2])
 print(classGpa[2])
+#Changeing items in a list
