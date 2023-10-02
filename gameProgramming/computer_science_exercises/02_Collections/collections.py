@@ -23,7 +23,7 @@ classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
 print(breakfastFoods[-1])
 print(testScores[-1])
 print(classGpa[-1])
-
+#Number three on each list
 print(breakfastFoods[2])
 print(testScores[2])
 print(classGpa[2])
