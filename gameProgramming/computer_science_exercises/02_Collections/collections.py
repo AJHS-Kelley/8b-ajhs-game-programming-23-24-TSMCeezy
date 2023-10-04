@@ -40,13 +40,30 @@ classGpa[0] = 3.57
 #print (testScores)
 #print(classGpa)
 
-breakfastFoods[4]="fort"
-testScores[4]=7
-classGpa[4]=3.0
+#breakfastFoods[4]="fort"
+#testScores[4]=7
+#classGpa[4]=3.0
 
-print(breakfastFoods[4])
-print(testScores[4])
-print(classGpa[4])
-print (breakfastFoods)
-print (testScores)
+#print(breakfastFoods[4])
+#print(testScores[4])
+#print(classGpa[4])
+#print (breakfastFoods)
+#print (testScores)
+#print(classGpa)
+
+# Adding and inserting items to a list
+# .append() adds an item to the end of the list
+breakfastFoods.append("Orange")
+#print (breakfastFoods)
+testScores.append(99)
+#print(testScores)
+classGpa.append(7.0)
+#print(classGpa)
+
+# .Insert() allows you to place an item at a specific index/spot in the list
+breakfastFoods.insert(2,"Eggs")
+print(breakfastFoods)
+testScores.insert(3, "heloo")
+print(testScores)
+classGpa.insert(3, 4.26)
 print(classGpa)
