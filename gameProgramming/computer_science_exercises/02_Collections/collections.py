@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.1C
+#Collections examples, Ceon gordon V0.1D
 
 #LIST -- ordered, changeable, it allows duplicates
 breakfastFoods = ["Bacon", "Waffles", "Bread"] 
