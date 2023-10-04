@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.2A
+#Collections examples, Ceon gordon V0.2C
 
 #LIST -- ordered, changeable, it allows duplicates
 breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
@@ -53,17 +53,41 @@ classGpa[0] = 3.57
 
 # Adding and inserting items to a list
 # .append() adds an item to the end of the list
-breakfastFoods.append("Orange")
+#breakfastFoods.append("Orange")
 #print (breakfastFoods)
-testScores.append(99)
+#testScores.append(99)
 #print(testScores)
-classGpa.append(7.0)
+#classGpa.append(7.0)
 #print(classGpa)
 
 # .Insert() allows you to place an item at a specific index/spot in the list
-breakfastFoods.insert(2,"Eggs")
+#breakfastFoods.insert(2,"Eggs")
+#print(breakfastFoods)
+#testScores.insert(3, "heloo")
+#print(testScores)
+#classGpa.insert(3, 4.26)
+#print(classGpa)
+
+# Deleting from list
+# Use .remove()in list
+#breakfastFoods.remove("Bread")
+#print(breakfastFoods)
+#testScores.remove(100)
+#print(testScores)
+#classGpa.remove(1.99)
+#print(classGpa)
+
+# To delete using the index/spot number use .pop()
+breakfastFoods.pop(1)
 print(breakfastFoods)
-testScores.insert(3, "heloo")
+testScores.pop(1)
 print(testScores)
-classGpa.insert(3, 4.26)
+classGpa.pop(1)
+print(classGpa)
+
+breakfastFoods.remove("Bread")
+print(breakfastFoods)
+testScores.remove(25)
+print(testScores)
+classGpa.remove(1.99)
 print(classGpa)
