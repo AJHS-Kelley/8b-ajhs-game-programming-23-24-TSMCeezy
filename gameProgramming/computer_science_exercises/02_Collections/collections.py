@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.2C
+#Collections examples, Ceon gordon V0.3A
 
 #LIST -- ordered, changeable, it allows duplicates
 breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
@@ -78,16 +78,21 @@ classGpa[0] = 3.57
 #print(classGpa)
 
 # To delete using the index/spot number use .pop()
-breakfastFoods.pop(1)
-print(breakfastFoods)
-testScores.pop(1)
-print(testScores)
-classGpa.pop(1)
-print(classGpa)
+#breakfastFoods.pop(1)
+#print(breakfastFoods)
+#testScores.pop(1)
+#print(testScores)
+#classGpa.pop(1)
+#print(classGpa)
 
-breakfastFoods.remove("Bread")
-print(breakfastFoods)
-testScores.remove(25)
-print(testScores)
-classGpa.remove(1.99)
-print(classGpa)
+#breakfastFoods.remove("Bread")
+#print(breakfastFoods)
+#testScores.remove(25)
+#print(testScores)
+#classGpa.remove(1.99)
+#print(classGpa)
+
+# Determining list leghth 
+print(f"There are {len(breakfastFoods)} items in breakfeast list.")
+print(f"Some of the scores on the test vary but most are in between{len(testScores)} adverages.")
+print(f"The average for class GPAS varied from {len(classGpa)} diffrent gpas.")
