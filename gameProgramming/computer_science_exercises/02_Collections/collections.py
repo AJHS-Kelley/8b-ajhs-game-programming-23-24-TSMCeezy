@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.3A
+#Collections examples, Ceon gordon V0.4A
 
 #LIST -- ordered, changeable, it allows duplicates
 breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
@@ -93,6 +93,16 @@ classGpa[0] = 3.57
 #print(classGpa)
 
 # Determining list leghth 
-print(f"There are {len(breakfastFoods)} items in breakfeast list.")
-print(f"Some of the scores on the test vary but most are in between{len(testScores)} adverages.")
-print(f"The average for class GPAS varied from {len(classGpa)} diffrent gpas.")
+#print(f"There are {len(breakfastFoods)} items in breakfeast list.")
+#print(f"Some of the scores on the test vary but most are in between{len(testScores)} adverages.")
+#print(f"The average for class GPAS varied from {len(classGpa)} diffrent gpas.")
+
+# List methodes -- Functions fr working with list.
+# Sorting List -- Alphanumerical -- Acending -- Capitial before lower case letters.
+print(f"The original breakfeastfood list is {breakfastFoods}.")
+breakfastFoods.sort()
+print(f"The sorted breakfastFood list is {breakfastFoods}.")
+testScores.sort()
+print(f"The sorted class score range through {testScores}.")
+classGpa.sort()
+print(f"The class gpa sorted in {classGpa}.")
