@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.4A
+#Collections examples, Ceon gordon V0.4C
 
 #LIST -- ordered, changeable, it allows duplicates
 #breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
@@ -112,7 +112,15 @@ testScores = [95,100,25,15,27,35,95]
 classGpa = [3.14,2.25,1.74,1.99,8.99,3.14,4.25]
 
 # .count() will return the number of times a value appears in a list
-numWaffles = breakfastFoods.count("Waffles")
-print(f"There are {numWaffles} waffle in the list.")
-numBacon = breakfastFoods.count("Bacon")
-print(f"There are {numBacon} bacons in the list.")
+#numWaffles = breakfastFoods.count("Waffles")
+#print(f"There are {numWaffles} waffle in the list.")
+#numBacon = breakfastFoods.count("Bacon")
+#print(f"There are {numBacon} bacons in the list.")
+
+# Deleting All contents of a list -- .clear()
+#breakfastFoods.clear()
+#print(f"The breakfeast food list is {breakfastFoods}.")
+#testScores.clear()
+#print(f"The test score list is {testScores}.")
+#classGpa.clear()
+#print(f"The class gpa list is {classGpa}.")
