@@ -1,4 +1,4 @@
-#Collections examples, Ceon gordon V0.4C
+#Collections examples, Ceon gordon V0.5A
 
 #LIST -- ordered, changeable, it allows duplicates
 #breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
@@ -124,3 +124,8 @@ classGpa = [3.14,2.25,1.74,1.99,8.99,3.14,4.25]
 #print(f"The test score list is {testScores}.")
 #classGpa.clear()
 #print(f"The class gpa list is {classGpa}.")
+
+# Common bugs -- index Out of range
+#print(f"THe last item in the list {breakfastFoods[7]}")
+
+print(f"The last item on testScores list is {testScores[len(testScores)-1]}")
