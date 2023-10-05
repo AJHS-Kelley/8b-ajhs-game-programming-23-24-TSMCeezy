@@ -1,13 +1,13 @@
 #Collections examples, Ceon gordon V0.4A
 
 #LIST -- ordered, changeable, it allows duplicates
-breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
+#breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6"] 
 #Each item is a element
 #THe position in the list for each is the INDEX
 #The element "Bacon" is at idex 0
 #Python Only: Index -1 it is the last item on the list
-testScores = [95,100,25,15,27,35]
-classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
+#testScores = [95,100,25,15,27,35]
+#classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
 
 # Printing contents of an list
 #print (breakfastFoods)
@@ -29,9 +29,9 @@ classGpa = [3.14,2.25,1.74,1.99,8.99,4.25]
 #print(classGpa[2])
 #Changeing items in a list
 
-breakfastFoods [0] = "Sausage"
-testScores[0]= 97
-classGpa[0] = 3.57
+#breakfastFoods [0] = "Sausage"
+#testScores[0]= 97
+#classGpa[0] = 3.57
 
 #print(breakfastFoods[0])
 #print(testScores[0])
@@ -99,10 +99,20 @@ classGpa[0] = 3.57
 
 # List methodes -- Functions fr working with list.
 # Sorting List -- Alphanumerical -- Acending -- Capitial before lower case letters.
-print(f"The original breakfeastfood list is {breakfastFoods}.")
-breakfastFoods.sort()
-print(f"The sorted breakfastFood list is {breakfastFoods}.")
-testScores.sort()
-print(f"The sorted class score range through {testScores}.")
-classGpa.sort()
-print(f"The class gpa sorted in {classGpa}.")
+#print(f"The original breakfeastfood list is {breakfastFoods}.")
+#breakfastFoods.sort()
+#print(f"The sorted breakfastFood list is {breakfastFoods}.")
+#testScores.sort()
+#print(f"The sorted class score range through {testScores}.")
+#classGpa.sort()
+#print(f"The class gpa sorted in {classGpa}.")
+
+breakfastFoods = ["Bacon", "Waffles", "Bread", "h", "5", "6", "Bacon"] 
+testScores = [95,100,25,15,27,35,95]
+classGpa = [3.14,2.25,1.74,1.99,8.99,3.14,4.25]
+
+# .count() will return the number of times a value appears in a list
+numWaffles = breakfastFoods.count("Waffles")
+print(f"There are {numWaffles} waffle in the list.")
+numBacon = breakfastFoods.count("Bacon")
+print(f"There are {numBacon} bacons in the list.")
