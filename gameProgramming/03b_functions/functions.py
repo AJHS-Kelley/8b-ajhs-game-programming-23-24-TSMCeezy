@@ -19,12 +19,20 @@ def exampleFunctionB(num,count): #PARAMETERS
 
 def rollDice(numDice, sizeDIce,):
     numRolled=0
+    sum = 0
     while numRolled < numDice:
         roll = random.randint(1, sizeDIce)
+        sum += roll
         print(f"Roll: {roll}\n")
+        print(f"SUm: {sum}\n")
         numRolled += 1
+        return sum
 
 rollDice(3, 6)
-rollDice(1, 20)
+
+strengthPlayer= rollDice(3, 6)
+dexterityPlayer= rollDice(3, 6)
+wisdomplayer= rollDice(3, 6)
+
 
 
