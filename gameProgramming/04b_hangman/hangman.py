@@ -82,7 +82,11 @@ def getGuess(alreadyGuessed):
             print('Please guess a letter from the English alphabet.')
         else:
             return guess 
-           
+
+def playAgain():
+    print('Try one more time?')  
+    return input(). lower().startwith('y')
+      
 
 
 #i = 0
