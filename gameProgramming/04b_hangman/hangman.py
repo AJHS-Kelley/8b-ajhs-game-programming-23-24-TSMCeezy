@@ -58,6 +58,32 @@ def displayboard(missedLetters, correctLetters, secretWord):
         print(eachLetter, end = ' ')
     print()
 
+    blanks='_'*len(secretWord)
+    
+    #Replace blanks with correct letters
+    for i in range(len(secretWord)):
+        if secretWord[i] ? correctLetters:
+            blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
+
+    for letter in blanks:
+        print(letter, end = '')
+    print()
+
+def getGuess(alreadyGuessed):
+    while True:
+        print('Guess a letter from the key board')
+        guess = input()
+        guess= guess.lower()
+        if len(guess) != 1:
+            print('enter a single letter.')
+        elif guess in alreadyGuessed:
+            print('letter has been guessed, try agian.')
+        elif guess not in 'abcdefghijklmnopqrstuvwxwz':
+            print('Please guess a letter from the English alphabet.')
+        else:
+            return guess 
+           
+
 
 #i = 0
 #while i < 50:
