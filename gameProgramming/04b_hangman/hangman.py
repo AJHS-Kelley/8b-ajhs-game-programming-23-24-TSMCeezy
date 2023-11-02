@@ -62,7 +62,7 @@ def displayboard(missedLetters, correctLetters, secretWord):
     
     #Replace blanks with correct letters
     for i in range(len(secretWord)):
-        if secretWord[i] ? correctLetters:
+        if secretWord[i]  not in correctLetters:
             blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
 
     for letter in blanks:
@@ -97,13 +97,41 @@ gameIsDone = False
 
 #Main game loop
 while True:
-    displayBoard(missedLetters, correctLetters, secretWord)
+    displayboard(missedLetters, correctLetters, secretWord)
 
     guess = getGuess(missedLetters + correctLetters)
 
     if guess in secretWord:
         correctLetters = correctLetters + guess
-#i = 0
+
+        #Check if they guess the whole word
+        foundAllLetters= True
+        for i in range(len(secretWord)):
+            if secretWord[i] not in correctLetters
+            foundAllLetters = False
+            break
+        if foundAllLetters:
+            print('Good job you guessed all the letters right')
+            print('The secret word was' + secretWord)
+            gameIsDone = True 
+    else:
+        missedLetters = missedLetters + guess
+
+        if len(missedLetters) == len (HANGMAN_BOARD) - 1:
+            displayboard(missedLetters, correctLetters, secretWord)
+            print('You have run out of guesses and lost the game.')
+            print('The word was' + secretWord)
+            gameIsDone = True
+
+    if gameIsDone:
+        if playAgain():
+            missedLetters = ''
+            correctLetters = ''
+            gameIsDone = False
+            secretWord = getRandomWord (words)
+        else: 
+            break
+            #i = 0
 #while i < 50:
     word=getRandomword(words)
     print(word)
