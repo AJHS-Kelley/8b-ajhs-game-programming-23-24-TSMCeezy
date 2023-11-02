@@ -44,7 +44,7 @@ while i < len(HANGMAN_BOARD):
     print(HANGMAN_BOARD[i])
     i+= 1
 
-def getRandomword(wordList): # return a random word from the list
+def getRandomWord(wordList): # return a random word from the list
     wordIndex = random.randint(0,len(wordList)-1)
     #len(listName)-1 is common for working with list.
     return wordList[wordIndex]
@@ -86,9 +86,23 @@ def getGuess(alreadyGuessed):
 def playAgain():
     print('Try one more time?')  
     return input(). lower().startwith('y')
-      
 
 
+#Start of the game
+print('Welcome to hangman by ceon.')
+missedLetters = ''
+correctLetters = ''
+secretWord= getRandomWord(words)
+gameIsDone = False
+
+#Main game loop
+while True:
+    displayBoard(missedLetters, correctLetters, secretWord)
+
+    guess = getGuess(missedLetters + correctLetters)
+
+    if guess in secretWord:
+        correctLetters = correctLetters + guess
 #i = 0
 #while i < 50:
     word=getRandomword(words)
