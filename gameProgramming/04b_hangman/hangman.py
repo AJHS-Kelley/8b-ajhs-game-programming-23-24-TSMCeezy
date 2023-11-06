@@ -59,10 +59,10 @@ while i < len(HANGMAN_BOARD):
     print(HANGMAN_BOARD[i])
     i+= 1
 
-def getRandomWord(wordList): # return a random word from the list
-    wordIndex = random.randint(0,len(wordList)-1)
-    #len(listName)-1 is common for working with list.
-    return wordList[wordIndex]
+# def getRandomWord(wordList): # return a random word from the list
+#     wordIndex = random.randint(0,len(wordList)-1)
+#     #len(listName)-1 is common for working with list.
+#     return wordList[wordIndex]
 #Pikc random word from dictionary
 def getRandomWord(wordDict): # return a random word from the list
     wordKey = random.choice (list(wordDict.keys()))
@@ -128,11 +128,12 @@ if difficulty == 'H': #hard
 
 missedLetters = ''
 correctLetters = ''
-secretWord= getRandomWord(words)
+secretWord, secretSet, = getRandomWord(words)
 gameIsDone = False
 
 #Main game loop
 while True:
+    print ('The secret word is from the ' + secretSet + ' catagory.\n')
     displayboard(missedLetters, correctLetters, secretWord)
 
     guess = getGuess(missedLetters + correctLetters)
@@ -164,7 +165,7 @@ while True:
             missedLetters = ''
             correctLetters = ''
             gameIsDone = False
-            secretWord = getRandomWord (words)
+            secretWord, secretSet = getRandomWord (words)
         else: 
             break
             #i = 0
