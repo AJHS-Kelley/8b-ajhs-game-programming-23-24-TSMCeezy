@@ -1,8 +1,15 @@
 # Hang man game Ceon v0.1
 import random
-words= 'cat dog goat frog cheeta bird fish turtle cow moose one two three four five six seven eight nine ten killer danny phanny telephone jacksonville ceon computer maximum minimum death'.split() #30 words
-print(words)
+#words= 'cat dog goat frog cheeta bird fish turtle cow moose one two three four five six seven eight nine ten killer danny phanny telephone jacksonville ceon computer maximum minimum death'.split() #30 words
 # VARIABAL_NAMES in all caps are constants meant not to CHAnge!
+# Dictionary version
+# Stored in Key:Value Pairs.
+#Actually Dictionary Word (Key) : Value (Definition)
+# Uses {} to specify a dictionary.
+words= {'Colors': 'red, blue, orange, green, purple, teal, gold, silver, white, black'.split(),
+        'Animals': 'dog cat worm cow chicken human duck gator bird spider'.split(),
+        'Shapes': 'square triangle circle rhombus parrallelogram trapezoid diamond dodecahdron'.split(),
+        'Foods': 'burger fries shake waffle pancakes potatoes meat carrot salad spinich'.split() }
 HANGMAN_BOARD= ['''
    +---+
        |
@@ -38,7 +45,15 @@ HANGMAN_BOARD= ['''
    o   |
   /|\  |
   / \  |
-    ========''']
+    ========''','''   +---+
+   o   |
+  /|\- |
+  / \  |
+    ========''','''   
+   o   |
+  /|\_ |
+  / \_ |
+    ========''',]
 i=0
 while i < len(HANGMAN_BOARD):
     print(HANGMAN_BOARD[i])
@@ -48,6 +63,12 @@ def getRandomWord(wordList): # return a random word from the list
     wordIndex = random.randint(0,len(wordList)-1)
     #len(listName)-1 is common for working with list.
     return wordList[wordIndex]
+#Pikc random word from dictionary
+def getRandomWord(wordDict): # return a random word from the list
+    wordKey = random.choice (list(wordDict.keys()))
+    wordIndex = random.randint(0, len(wordDict[wordKey]-1))
+    #len(listName)-1 is common for working with list.
+    return [wordDict[wordKey][wordIndex], wordKey]
 
 def displayboard(missedLetters, correctLetters, secretWord):
     print(HANGMAN_BOARD[len(missedLetters)])
@@ -90,6 +111,21 @@ def playAgain():
 
 #Start of the game
 print('Welcome to hangman by ceon.')
+
+# CHoose Dif
+difficulty = 'X'
+while difficulty not in 'EMH':
+    print('Choose easy med and hard by puting the first letter of the dif.\n')
+    difficulty= input().upper()
+if difficulty == 'M': #med
+    del HANGMAN_BOARD [8]
+    del HANGMAN_BOARD[7]
+if difficulty == 'H': #hard
+    del HANGMAN_BOARD[8]
+    del HANGMAN_BOARD[7]
+    del HANGMAN_BOARD[6]
+    del HANGMAN_BOARD[5]
+
 missedLetters = ''
 correctLetters = ''
 secretWord= getRandomWord(words)
@@ -107,9 +143,9 @@ while True:
         #Check if they guess the whole word
         foundAllLetters= True
         for i in range(len(secretWord)):
-            if secretWord[i] not in correctLetters
-            foundAllLetters = False
-            break
+            if secretWord[i] not in correctLetters:
+              foundAllLetters = False
+              break
         if foundAllLetters:
             print('Good job you guessed all the letters right')
             print('The secret word was' + secretWord)
@@ -133,6 +169,6 @@ while True:
             break
             #i = 0
 #while i < 50:
-    word=getRandomword(words)
-    print(word)
-    i += 1
+    #word=getRandomword(words)
+    #print(word)
+    #i += 1
