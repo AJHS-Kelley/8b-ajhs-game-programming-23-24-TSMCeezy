@@ -112,7 +112,7 @@ def playAgain():
 #Start of the game
 print('Welcome to hangman by ceon.')
 
-# CHoose Dif
+# Choose Dif
 difficulty = 'X'
 while difficulty not in 'EMH':
     print('Choose easy med and hard by puting the first letter of the dif.\n')
