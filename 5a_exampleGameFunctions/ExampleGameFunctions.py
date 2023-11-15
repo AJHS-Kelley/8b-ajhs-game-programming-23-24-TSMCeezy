@@ -27,35 +27,47 @@ def functionFour(param1, param2, param3):
 #catchBall(4.25, 107, 'Rainy')
 
 #PlatformGame
-moveForwardAmount = -1
-moveBackAmount = -1 
+moveForwardAmount = 0
+moveBackAmount = 0 
 turnLeftAmount = 0
-turnRightAmount = 0
-winAmount = ''
+gameScore= 0
+
 
 print("""
      *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
       |                                                             |
-      |                   Platform game functions                   |
+      |                   basket ball game functions                |
       |                         ceon gordon                         |
       |                            2023                             |
       *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~* 
       
       """)
-print ("In this game your goal is to guess how many times you move a certian direction those being Right, Left, Forward, and Back using keys W for forward, S for down, D for right, and A for left.")
+print ("shoot your shot by .")
 
-def moveForward ():
-    input 
+def keepScore(wordDict): 
 
-def moveBack (param1):
-    pass
+def scorePoints(ballHieght, ballSpeed, shotMade):
+    if shotMade == True +1 gameScore
+        else if shotMade == False return to shoot your shot
+    
 
-def turnLeft(param1= "Defualt Value"):
-    pass
+def didWin(alreadyGuessed):
+    while True:
+        print('Guess a letter from the key board')
+        guess = input()
+        guess= guess.lower()
+        if len(guess) != 1:
+            print('enter a single letter.')
+        elif guess in alreadyGuessed:
+            print('letter has been guessed, try agian.')
+        elif guess not in 'abcdefghijklmnopqrstuvwxwz':
+            print('Please guess a letter from the English alphabet.')
+        else:
+            return guess 
 
-def turnRight(param1, param2, param3):
-    pass
-
+def playAgain():
+    print('Try one more time?')  
+    return input(). lower().startwith('y')
 
 
 
