@@ -26,34 +26,35 @@ def functionFour(param1, param2, param3):
 
 #catchBall(4.25, 107, 'Rainy')
 
-#Adventure Game
-def rollDice(numDice, sizeDIce,):
-    numRolled=0
-    sum = 0
-    while numRolled < numDice:
-        roll = random.randint(1, sizeDIce)
-        sum += roll
-        print(f"Roll: {roll}\n")
-        print(f"Sum: {sum}\n")
-        numRolled += 1
-        return sum 
-    
-strengthPlayer= rollDice(3, 6)
-dexterityPlayer= rollDice(3, 6)
-wisdomplayer= rollDice(3, 6)
+#PlatformGame
+moveForwardAmount = -1
+moveBackAmount = -1 
+turnLeftAmount = 0
+turnRightAmount = 0
+winAmount = ''
 
-def gainHealth():
-    playerHealth = [0]
-    i = 0
-    while i < 6:
-     playerHealth[i] = rollDice (3,6) 
-     while i < len(playerHealth):
-      i+=1
-     
-    print(playerHealth)
+print("""
+     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+      |                                                             |
+      |                   Platform game functions                   |
+      |                         ceon gordon                         |
+      |                            2023                             |
+      *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~* 
+      
+      """)
+print ("In this game your goal is to guess how many times you move a certian direction those being Right, Left, Forward, and Back using keys W for forward, S for down, D for right, and A for left.")
 
-gainHealth()
+def moveForward ():
+    input 
 
+def moveBack (param1):
+    pass
+
+def turnLeft(param1= "Defualt Value"):
+    pass
+
+def turnRight(param1, param2, param3):
+    pass
 
 
 
