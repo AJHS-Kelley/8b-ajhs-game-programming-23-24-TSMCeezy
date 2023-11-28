@@ -36,38 +36,45 @@ gameScore= 0
 print("""
      *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
       |                                                             |
-      |                   basket ball game functions                |
+      |                   platformer stat generater                 |
       |                         ceon gordon                         |
       |                            2023                             |
       *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~* 
       
       """)
-print ("shoot your shot by .")
+print ("Make your stats.")
 
-def keepScore(wordDict): 
 
-def scorePoints(ballHieght, ballSpeed, shotMade):
-    if shotMade == True +1 gameScore
-        else if shotMade == False return to shoot your shot
-    
+def rollDice(numDice, sizeDIce,):
+    numRolled=0
+    sum = 0
+    while numRolled < numDice:
+        roll = random.randint(1, sizeDIce)
+        sum += roll
+        print(f"Roll: {roll}\n")
+        print(f"SUm: {sum}\n")
+        numRolled += 1
+        return sum 
+rollDice(3, 6)
 
-def didWin(alreadyGuessed):
-    while True:
-        print('Guess a letter from the key board')
-        guess = input()
-        guess= guess.lower()
-        if len(guess) != 1:
-            print('enter a single letter.')
-        elif guess in alreadyGuessed:
-            print('letter has been guessed, try agian.')
-        elif guess not in 'abcdefghijklmnopqrstuvwxwz':
-            print('Please guess a letter from the English alphabet.')
-        else:
-            return guess 
+strengthPlayer= rollDice(3, 6)
+dexterityPlayer= rollDice(3, 6)
+wisdomplayer= rollDice(3, 6)
 
-def playAgain():
-    print('Try one more time?')  
-    return input(). lower().startwith('y')
+def genStats():
+    playerStats = [0,0,0,0,0,0]
+    i = 0
+    while i < 6:
+     playerStats[i] = rollDice (3,6) # Strenth
+     while i < len(playerStats):
+      i+=1
+     
+    print(playerStats)
+
+genStats()
+
+
+
 
 
 
