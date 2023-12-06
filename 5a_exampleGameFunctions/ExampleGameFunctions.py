@@ -52,7 +52,7 @@ def rollDice(numDice, sizeDIce,):
         roll = random.randint(1, sizeDIce)
         sum += roll
         print(f"Roll: {roll}\n")
-        print(f"SUm: {sum}\n")
+        print(f"Strength: {sum}\n")
         numRolled += 1
         return sum 
 rollDice(3, 6)
