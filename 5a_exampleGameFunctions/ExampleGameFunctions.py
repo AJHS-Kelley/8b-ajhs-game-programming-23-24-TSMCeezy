@@ -47,31 +47,37 @@ print ("Make your stats.")
 
 def rollDice(numDice, sizeDIce,):
     numRolled=0
-    sum = 0
+    sum= 0
     while numRolled < numDice:
         roll = random.randint(1, sizeDIce)
         sum += roll
-        print(f"Roll: {roll}\n")
-        print(f"Strength: {sum}\n")
+        #print(f"Wisdom: {roll}\n")
+        #print(f"Strength: {roll}\n")
+        #print(f"dexterity:{roll}\n")
         numRolled += 1
         return sum 
-rollDice(3, 6)
+rollDice(1, 6)
 
-strengthPlayer= rollDice(3, 6)
-dexterityPlayer= rollDice(3, 6)
-wisdomplayer= rollDice(3, 6)
-
+strengthPlayer= rollDice(1, 6)
+dexterityPlayer= rollDice(1, 6)
+wisdomplayer= rollDice(1, 6)
+#print(strengthPlayer)
+#print(dexterityPlayer)
+#print(wisdomplayer)
 def genStats():
-    playerStats = [0,0,0,0,0,0]
+    playerStats = [0,0,0]
     i = 0
-    while i < 6:
-     playerStats[i] = rollDice (3,6) # Strenth
+    while i < 3:
+     playerStats[i] = rollDice (1,6) # Strenth
      while i < len(playerStats):
       i+=1
      
     print(playerStats)
 
 genStats()
+print("First number is your strength, second wisdom, last dexterity")
+
+
 
 
 #edited by jermya jitt.
