@@ -76,12 +76,14 @@ def genStats():
     return playerStats 
 
 myCharacter = genStats() 
-print("MY CHARACTER TEST")
+print("FIRST IS YOUR STRENGTH, SECOND IS DEXTERITY, AND LAST IS WISDOM PRESS r TO RE ROLL")
 print(myCharacter)
 
 # genStats()
 # print("First number is your strength, second wisdom, last dexterity")
-
+def playAgain():
+    print('Try one more time? ')  
+    return input(). lower().startwith('r')
 
 
 
