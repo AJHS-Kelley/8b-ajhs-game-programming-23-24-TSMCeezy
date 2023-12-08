@@ -67,15 +67,20 @@ wisdomplayer= rollDice(1, 6)
 def genStats():
     playerStats = [0,0,0]
     i = 0
-    while i < 3:
-     playerStats[i] = rollDice (1,6) # Strenth
-     while i < len(playerStats):
-      i+=1
+    while i <= len(playerStats) - 1:
+        print(f"i is {i}")
+        playerStats[i] = rollDice (1,6) # Strenth        
+        i += 1
      
     print(playerStats)
+    return playerStats 
 
-genStats()
-print("First number is your strength, second wisdom, last dexterity")
+myCharacter = genStats() 
+print("MY CHARACTER TEST")
+print(myCharacter)
+
+# genStats()
+# print("First number is your strength, second wisdom, last dexterity")
 
 
 
