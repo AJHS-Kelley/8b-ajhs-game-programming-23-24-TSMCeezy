@@ -22,4 +22,4 @@ def display(numDice, sizeDIce,):
         numRolled += 1
         return sum # RETURN will exit a loop, function, if/elif/else block.
 
-display(1, 100)
+#display(1, 100)
