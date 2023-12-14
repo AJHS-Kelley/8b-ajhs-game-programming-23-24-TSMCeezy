@@ -3,7 +3,7 @@
 
 favColor = "orange"
 luckyNumber = 30
-nyGPA = 3.8
+myGPA = 3.8
 myAge = 16
 chickenSaladForDinner = True
 
