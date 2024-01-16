@@ -54,9 +54,31 @@ def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
 
     return isMatch
 
+def calcScore(rnaSequence:str, rnaTime: float ) ->  int:
+    score = 0
+    if rnaTime < 1.0:
+        score +=1000000
+    elif rnaTime < 5.0:
+        score += 9000
+    elif rnaTime < 15.0:
+        score += 800
+    else:
+        score += 10
+
+    scoreMulti = 0.0
+    if len(rnaSequence) >= 30:
+        scoreMulti = 5.0
+    elif len(rnaSequence) >= 25:
+        scoreMulti= 4.0
+    elif len(rnaSequence) >= 15:
+        scoreMulti= 1.0
+        score *= scoreMulti
+    return score
 
 
 
 rna = doTranscription(dna)
 print (verifySequence(dna, rna[0]))
+
+print(calcScore(rna[0],rna[1]))
 
