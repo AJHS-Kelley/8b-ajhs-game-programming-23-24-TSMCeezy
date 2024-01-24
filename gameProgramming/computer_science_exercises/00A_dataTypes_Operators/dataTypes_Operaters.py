@@ -69,7 +69,7 @@ x = x + 1
 print(3 > 5 and 4 < 3) # AND requires ALL Expressions to be True
 print(3 > 2 and 4 < 3)
 print(3 > 2 and 4 != 3)
-print(3 > 2 and 4 and FavColor == "Blue" and temp == -5)
+print(3 > 2 and 4 and favColor == "Blue" and temp == -5)
 # When writting and expressions, put the most likely to be False 
 
 # Logical OR -- Reuires only one expression to be true
