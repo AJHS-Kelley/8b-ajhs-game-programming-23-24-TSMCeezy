@@ -18,9 +18,6 @@ def genDNA() -> str:
         bassGenerated += 1
     return dnaSequence
     
-dna = genDNA()
-
-
 def doTranscription (dnaSequence: str) -> tuple:
     print(f"The DNA Sequence is {dnaSequence}.\n")
     print("You will now generate the RNA sequence that would match.\n")
@@ -78,7 +75,7 @@ def calcScore(rnaSequence:str, rnaTime: float ) ->  int:
         score *= scoreMulti
     return score
 
-def saveScore(dnaSequence: str, rnaSequence: str, rnaTime, float, score: int)-> None:
+def saveScore(dnaSequence: str, rnaSequence: str, rnaTime: float, score: int)-> None:
     playerName = input ("Whats your name?\n")
     lastName = input("And your last name?\n")
     fullName = playerName + " " + lastName
@@ -89,7 +86,7 @@ def saveScore(dnaSequence: str, rnaSequence: str, rnaTime, float, score: int)-> 
     # "x" mode -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR
     # "w" mode -- CREATE FILE IF FILE EXITS, OVERWRITE IT
     # "a" mode -- CREATE FILE, IF FILE EXIXTS, APPEND TO IT
-    saveData.write(f"\n Score Generated:{datetime.datetime.now()}")
+    saveData.write(f"\n Score Generated:{datetime.datetime.now()}\n")
     saveData.write(f"Transcription Time: {rnaTime}\n")
     saveData.write(f"Score:{score}\n")
     saveData.write(f"{fullName}\n")
