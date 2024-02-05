@@ -100,5 +100,7 @@ if verifySequence(dna, rna [0]):
     saveScore(dna, rna[0], rna[1], score)
 
 
+# The line to generate the DNA bases is printing twice. 
+# After entering an RNA sequence to check for a match the program crashes. 
 
 
