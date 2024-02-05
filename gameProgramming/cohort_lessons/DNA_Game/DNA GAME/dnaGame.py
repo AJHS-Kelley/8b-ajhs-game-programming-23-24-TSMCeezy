@@ -57,7 +57,7 @@ def verifySequence(dnaSequence: str, rnaSequence: str) -> bool:
 def calcScore(rnaSequence:str, rnaTime: float ) ->  int:
     score = 0
     if rnaTime < 1.0:
-        score +=1000000
+        score +=100000
     elif rnaTime < 5.0:
         score += 9000
     elif rnaTime < 15.0:
@@ -70,8 +70,11 @@ def calcScore(rnaSequence:str, rnaTime: float ) ->  int:
         scoreMulti = 5.0
     elif len(rnaSequence) >= 25:
         scoreMulti= 4.0
+    elif len(rnaSequence)>= 20:
+        scoreMulti = 3.0 
     elif len(rnaSequence) >= 15:
-        scoreMulti= 1.0
+        scoreMulti= 2.0
+
         score *= scoreMulti
     return score
 
@@ -86,7 +89,7 @@ def saveScore(dnaSequence: str, rnaSequence: str, rnaTime, float, score: int)-> 
     # "x" mode -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR
     # "w" mode -- CREATE FILE IF FILE EXITS, OVERWRITE IT
     # "a" mode -- CREATE FILE, IF FILE EXIXTS, APPEND TO IT
-    saveData.write(f"DNA Sequence: {dnaSequence} \nRNA Sequence: {rnaSequence}\n")
+    saveData.write(f"\n Score Generated:{datetime.datetime.now()}")
     saveData.write(f"Transcription Time: {rnaTime}\n")
     saveData.write(f"Score:{score}\n")
     saveData.write(f"{fullName}\n")
