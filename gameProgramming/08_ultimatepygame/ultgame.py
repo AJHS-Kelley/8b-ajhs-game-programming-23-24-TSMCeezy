@@ -3,7 +3,7 @@ import pygame
 from sys import exit
 pygame.init()
 screen = pygame.display.set_mode((800,400))
-pygame.dispay.set_caption('Runner')
+pygame.display.set_caption('Runner')
 
 while True:
     for event in pygame.event.get():
