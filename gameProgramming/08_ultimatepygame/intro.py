@@ -16,13 +16,13 @@ test_font = pygame.font.Font(None, 50)
 game_active = True
 start_time = 0
 
-sky_surface = pygame.image.load('img/ultimate_pygame/sky.jpg').convert()
-ground_surface = pygame.image.load('img/ultimate_pygame/ground.jpg').convert()
+sky_surface = pygame.image.load('img/ultpy/Sky.png').convert()
+ground_surface = pygame.image.load('img/ultpy/ground.png').convert()
 
 # score_surf = test_font.render('Some Snail', False, 'Red')
 # score_rect = score_surf.get_rect(center = (400, 50))
 
-snail_surface = pygame.image.load('img/ultimate_pygame/snailenemy.png').convert()
+snail_surface = pygame.image.load('img/ultpy/snailenemy.png').convert()
 snail_rect = snail_surface.get_rect(topleft = (600, 170))
 
 peter_surf = pygame.image.load('img/ultimate_pygame/deadpeter.jfif').convert
