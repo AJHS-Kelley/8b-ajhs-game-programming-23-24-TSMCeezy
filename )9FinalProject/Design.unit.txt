@@ -3,3 +3,13 @@ Theme : fanticy
 
 Win condition: Reach the end
 Lose Condition: Fall off map or get hit
+
+Levels/ Screens
+-- In the sky 
+-- going to a castle
+
+Things to avoid
+-- gaps in the map ( long, narrow, and short gaps)
+
+Items 
+Shoes thats flips the screen from left to right to right to left
