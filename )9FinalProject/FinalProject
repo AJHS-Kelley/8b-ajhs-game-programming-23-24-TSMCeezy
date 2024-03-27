@@ -1,1 +1,23 @@
 # Final Project, Ceon Gordon
+import sys, random, pygame
+
+resolution = 0 # 0 = low = (800, 600) 1= high = (1920,1080)
+
+if resolution == 0:
+    x == 800
+    y == 600
+else:
+    x = 1920
+    y = 1080
+
+pygame.init()
+
+difficulty = int(input("Please choose a difficulty between 1 for Normal And 2 for Hard.\n"))
+
+pygame.display.set_caption('SKY RUN -- Normal')
+pygame.display.set_caption('SKY RUN-- HARD')
+if difficulty == 1:
+    pygame.display.set_caption('SKY RUN -- Normal')
+else:
+    pygame.display.set_caption('SKY RUN-- HARD')
+screen = pygame.display.set_mode ((x,y))
