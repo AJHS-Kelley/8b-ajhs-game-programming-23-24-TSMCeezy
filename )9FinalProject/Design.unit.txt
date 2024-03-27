@@ -1,0 +1,5 @@
+Game/ Type : platformer
+Theme : fanticy 
+
+Win condition: Reach the end
+Lose Condition: Fall off map or get hit
