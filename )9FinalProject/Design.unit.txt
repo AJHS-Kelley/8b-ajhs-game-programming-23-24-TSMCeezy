@@ -13,3 +13,9 @@ Things to avoid
 
 Items 
 Shoes thats flips the screen from left to right to right to left
+
+Challengs/ what changes the difficulty
+-- speed the charater up slowly
+
+Controlls
+-- The users press D to move forward and W to jump press W and D to run und jump
