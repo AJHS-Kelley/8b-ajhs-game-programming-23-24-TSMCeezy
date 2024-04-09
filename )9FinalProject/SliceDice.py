@@ -16,3 +16,6 @@ print(alphabet[0:])
 
 #Slice the whole thing
 print(alphabet[:])
+
+#Negative index
+print(alphabet[-2:-1])
