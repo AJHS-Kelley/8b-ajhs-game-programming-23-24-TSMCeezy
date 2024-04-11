@@ -10,7 +10,7 @@ test_font = pygame.font.Font(None, 50)
 
 sky_surface = pygame.image.load('img/ultpy/Sky.png')
 ground_surface = pygame.image.load('img/ultpy/ground.png')
-text_surface = test_font.render('My game', False,'Black')
+text_surface = test_font.render('Sky Fall', False,'Black')
 
 snail_surface = pygame.image.load('img/ultpy/snail1.png')
 snail_x_pos = 600
