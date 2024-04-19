@@ -10,7 +10,9 @@ test_font = pygame.font.Font(None, 50)
 
 sky_surface = pygame.image.load('img/ultpy/Sky.png').convert()
 ground_surface = pygame.image.load('img/ultpy/ground.png').convert()
-text_surface = test_font.render('Sky Fall', False,'Black')
+
+score_surf = test_font.render('Sky Fall', False,'Black')
+score_rect = score_surf.get_rect(center = (400,50))
 
 snail_surf = pygame.image.load('img/ultpy/snail1.png').convert_alpha()
 snail_rect = snail_surf.get_rect(midbottom = (80,300))
@@ -28,7 +30,8 @@ while True:
     
     screen.blit(sky_surface,(0,0))
     screen.blit(ground_surface,(0,300))
-    screen.blit(text_surface,(300,50))
+    pygame.draw.rect(screen,'Pink',score_rect,6,20)
+    screen.blit(score_surf,score_rect)
 
     snail_rect.x -= 4
     if snail_rect.right <= 0: snail_rect.left = 800
