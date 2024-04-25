@@ -1,4 +1,11 @@
 # Final Project, Ceon Gordon
+
+# Project Suggestions 
+# Add new images. 
+# Add obstacles / platforms. 
+# Add enemies. 
+# Add power-ups / items. 
+
 import pygame 
 from sys import exit
 
