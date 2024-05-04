@@ -99,7 +99,7 @@ test_font = pygame.font.Font('img/Pixeltype.ttf', 50)
 game_active = False
 start_time = 0
 score = 0
-bg_music = pygame.mixer.Sound('img/music.wav')
+bg_music = pygame.mixer.Sound('img/music1.wav')
 bg_music.play(loops = -1)
 
 #Groups
