@@ -4,26 +4,7 @@ import pygame
 from sys import exit
 from random import randint, choice
 
-while main:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit(); 
-            main = False
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT or event.key == ord('a'):
-                print('left')
-            if event.key == pygame.K_RIGHT or event.key == ord('d'):
-                print('right')
-            if event.key == pygame.K_UP or event.key == ord('w'):
-             event.type == pygame.KEYUP
-            if event.key == pygame.K_LEFT or event.key == ord('a'):
-                print('left stop')
-            if event.key == pygame.K_RIGHT or event.key == ord('d'):
-                print('right stop')
-            if event.key == ord('q'):
-                pygame.quit()
-                main = False    
 				
 class Player(pygame.sprite.Sprite):
 	def __init__(self):
@@ -46,6 +27,7 @@ class Player(pygame.sprite.Sprite):
 		if keys[pygame.K_SPACE] and self.rect.bottom >= 300:
 			self.gravity = -20
 			self.jump_sound.play()
+		
 
 	def apply_gravity(self):
 		self.gravity += 1
@@ -65,6 +47,8 @@ class Player(pygame.sprite.Sprite):
 		self.player_input()
 		self.apply_gravity()
 		self.animation_state()
+	
+    
 
 class Obstacle(pygame.sprite.Sprite):
 	def __init__(self,type):
