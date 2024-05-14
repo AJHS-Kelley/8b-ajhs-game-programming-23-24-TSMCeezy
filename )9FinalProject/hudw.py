@@ -23,11 +23,15 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_SPACE] and self.rect.bottom >= 300:
             self.gravity = -20
             self.jump_sound.play()
-
+        #HELP BHIBUBIBBOBUOBUO
     def move_forward(self):
+         keys = pygame.key.get_pressed()
+        if keys[pygame.K_D] and self.rect.bottom >= 300:
         self.rect.x += 5
 
     def move_backward(self):
+         keys = pygame.key.get_pressed()
+        if keys[pygame.K_A] and self.rect.bottom >= 300:
         self.rect.x -= 5
 
     def apply_gravity(self):
@@ -123,7 +127,7 @@ player_stand = pygame.image.load('img/player_stand.png').convert_alpha()
 player_stand = pygame.transform.rotozoom(player_stand, 0, 2)
 player_stand_rect = player_stand.get_rect(center=(400, 200))
 
-game_name = test_font.render('Pixel Runner', False, (111, 196, 169))
+game_name = test_font.render('Runner', False, (111, 196, 169))
 game_name_rect = game_name.get_rect(center=(400, 80))
 
 game_message = test_font.render('Press space to run', False, (111, 196, 169))
